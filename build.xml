@@ -1,4 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?>
+
+ <?xml version="1.0" encoding="UTF-8"?>
 <!-- Build file for our project -->
 <project basedir="." name="Word wrapping" default="main">
     <target name="main"
@@ -81,6 +82,12 @@
                 <attribute name="Main-Class" value="cz.alisma.alej.text.wrapping.WrapAndAlign" />
             </manifest>
         </jar>
+    </target>
+
+    <target name="example"
+            depends="jar"
+            description="Example execution: reformat LICENSE file.">
+        <java jar="out/jars/app.jar" fork="true" input="LICENSE" />
     </target>
 
     <target name="clean"
