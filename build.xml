@@ -1,5 +1,4 @@
-
- <?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <!-- Build file for our project -->
 <project basedir="." name="Word wrapping" default="main">
     <target name="main"
