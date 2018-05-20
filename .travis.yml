@@ -3,7 +3,6 @@ os:
   - linux
 before_install:
   - sudo apt-get install ant-optional
-  - sudo apt-get install java
 script:
   - ant compile
   - ant test
