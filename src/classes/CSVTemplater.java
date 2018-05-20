@@ -19,10 +19,13 @@ public class CSVTemplater {
 			switch (arguments[0]) {
 				case "--csv":
 					csvfile = arguments[1];
+					break;
 				case "--template":
 					filewithtemp = arguments[1];
+					break;
 				case "--out":
 					out = arguments[1];
+					break;
 				default:
 					continue;
 			}
