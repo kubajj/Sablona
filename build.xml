@@ -74,14 +74,14 @@
     <target name="jar"
             depends="compile"
             description="Build application JAR.">
-        <mkdir dir="target" />
-        	<jar destfile="target/templater.jar">
+        <mkdir dir="out" />
+        	<jar destfile="out/jars/templater.jar">
 			<fileset dir="out/classes" includes="**/*.class" />
 			<manifest>
 				<attribute name="Main-Class" value="classes.Templater" />
 			</manifest>
 		</jar>
-		<jar destfile="target/csv-templater.jar">
+		<jar destfile="out/jars/csv-templater.jar">
 			<fileset dir="out/classes" includes="**/*.class" />
 			<manifest>
 				<attribute name="Main-Class" value="classes.CSVTemplater" />
@@ -92,7 +92,7 @@
     <target name="example"
             depends="jar"
             description="Example execution: reformat LICENSE file.">
-        <java jar="out/jars/app.jar" fork="true" input="LICENSE" />
+        <java jar="out/jars/templater.jar" fork="true" input="LICENSE" />
     </target>
 
     <target name="clean"
