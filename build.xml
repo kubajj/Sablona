@@ -74,17 +74,17 @@
     <target name="jar"
             depends="compile"
             description="Build application JAR.">
-        <mkdir dir="out/jars" />
-        <jar destfile="out/jars/templater.jar">
+        <mkdir dir="target" />
+        	<jar destfile="target/templater.jar">
 			<fileset dir="out/classes" includes="**/*.class" />
 			<manifest>
-				<attribute name="Main-Class" value="Templater" />
+				<attribute name="Main-Class" value="classes.Templater" />
 			</manifest>
 		</jar>
-		<jar destfile="out/jars/csv-templater.jar">
+		<jar destfile="target/csv-templater.jar">
 			<fileset dir="out/classes" includes="**/*.class" />
 			<manifest>
-				<attribute name="Main-Class" value="CSVTemplater" />
+				<attribute name="Main-Class" value="classes.CSVTemplater" />
 			</manifest>
 		</jar>
     </target>
