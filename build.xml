@@ -29,7 +29,7 @@
                 destdir="out/test-classes"
                 debug="true"
                 includeantruntime="false">
-            <src path="src/tests" />
+            <src path="test" />
             <classpath>
                 <pathelement path="out/classes" />
                 <pathelement path="lib/junit-4.12.jar" />
