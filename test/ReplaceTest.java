@@ -7,7 +7,7 @@ import classes.Replace;
 
 public class ReplaceTest {
 	@Test
-	public void OneReplacement() {
+	public void oneReplacement() {
 		String text = "Salve {{ who }}, I wanted to send you a letter.\n";
 		Map<String, String> replacement= new HashMap<>();
 		replacement.put("who", "puer");
@@ -15,7 +15,7 @@ public class ReplaceTest {
     }
 	
 	@Test
-	public void ComplexTest() {
+	public void complexTest() {
 		String text = "Salve {{ who {{ adjective }} }}, I wanted to send you a letter.\n";
 		Map<String, String> replacement= new HashMap<>();
 		replacement.put("who", "puer");
@@ -24,21 +24,21 @@ public class ReplaceTest {
 	}
 	
 	@Test
-	public void NothingToDo() {
+	public void nothingToDo() {
 		String text = "Salve puer, I wanted to send you a letter.\n";
 		Map<String, String> replacement= new HashMap<>();
 		assertEquals("Salve puer, I wanted to send you a letter.\n", Replace.replace(text, replacement));
 	}
 	
 	@Test
-	public void NotingInTheMap() {
+	public void notingInTheMap() {
 		String text = "Salve {{ who }}, I wanted to send you a {{ what }}.\n";
 		Map<String, String> replacement= new HashMap<>();
 		assertEquals("Salve {{ who }}, I wanted to send you a {{ what }}.\n", Replace.replace(text, replacement));
 	}
 	
 	@Test
-	public void MultipleReplacements() {
+	public void multipleReplacements() {
 		String text = "Salve {{ who }}, I wanted to send you a {{ what }}.\n";
 		Map<String, String> replacement= new HashMap<>();
 		replacement.put("who", "puer");
