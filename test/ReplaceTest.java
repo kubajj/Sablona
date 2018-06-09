@@ -3,7 +3,6 @@ import java.util.HashMap;
 import java.util.Map;
 import org.junit.Test;
 
-import classes.Replace;
 
 public class ReplaceTest {
 	@Test

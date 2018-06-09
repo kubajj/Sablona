@@ -15,7 +15,7 @@
                 destdir="out/classes"
                 debug="true"
                 includeantruntime="false">
-            <src path="src/classes" />
+            <src path="src" />
             <compilerarg value="-Xlint:all"/>
         </javac>
     </target>
