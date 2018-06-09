@@ -89,12 +89,6 @@
 		</jar>
     </target>
 
-    <target name="example"
-            depends="jar"
-            description="Example execution: reformat LICENSE file.">
-        <java jar="out/jars/templater.jar" fork="true" input="LICENSE" />
-    </target>
-
     <target name="clean"
             description="Remove generated files."
         >
